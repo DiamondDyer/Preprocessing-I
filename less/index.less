@@ -19,7 +19,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
+	//border: 0;//
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -57,3 +57,92 @@ html, body {
     height: 100%;
 }
 
+//variables//
+@backgroundcolor:  #000000;
+@accentcolor: #7611B2;
+@headingcolor: #FFFFFF;
+@paragraphcolor: #949195  ;
+
+//mixins//
+.border(){
+	border-radius: 50%;
+	border-color: @accentcolor;
+	border-width: 20px;
+}
+
+.text(){
+	display:flex;
+	justify-content: left;
+	align-items: left;
+
+}
+
+.center(){
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+*{
+	border: 1px solid red
+}
+
+
+body{
+	background-color: @backgroundcolor;
+	
+}
+
+header{
+	width:100%;
+	margin: 2%;
+	padding: 2%;
+	
+		nav{
+			width:100%;
+			display:flex;
+			justify-content: flex-end;
+		}//This closes nav//
+
+			a{
+				font-size: 1.2rem;
+				text-decoration: none;
+				color: @headingcolor;
+				padding: 2%;
+				
+			}//This closes a links//
+}//This closed the header//
+
+.topcontent{
+	.center();
+
+.profilePic{
+	.center();
+	width:50%;
+	
+
+	img{
+		.border()
+	}//This closes img//
+
+	
+}//This closes .profilePic//
+
+	
+.aboutInfo{
+	width:50%;
+	
+	
+
+	h1{
+		color: @headingcolor;
+		font-size: 3rem;
+	}//This close h1//
+
+	p{
+		color: @paragraphcolor;
+		width:50%;
+		}//This closes p//
+
+	}//This closes .aboutInfo//
+}
